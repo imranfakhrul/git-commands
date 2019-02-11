@@ -16,3 +16,13 @@ OR
 
 ## Diffrence between staged version and last commmit
 `git diff --staged`
+
+## commit changes
+`git commit`
+`git commit -m "<your message>"`
+
+## to add and commit in one command
+`git commit -a -m "<your message>"`
+
+## Move to the stage area from last commit 
+`git reset --soft HEAD^`
