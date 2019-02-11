@@ -8,6 +8,8 @@ OR
 
 ## Get back from staged area
 `git rm --cached <filename>`
+OR
+`git reset HEAD <filename>`
 
 ## Diffrence between last commit and present version(Before stage)/Unstage diffrences
 `git diff`
