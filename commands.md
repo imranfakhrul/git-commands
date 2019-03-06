@@ -49,5 +49,56 @@ OR
 ## totally delete the last commit 
 `git reset --hard HEAD^`
 
-## totally delete the last two commit 
-`git reset --hard HEAD^^`
+## Totally delete the last two commit 
+`git reset --hard HEAD^^` 
+
+## To watch all remote branches
+`git branch -r`
+
+## To switch into branches
+`git checkout <branch name>`
+
+## To create branch
+`git branch <branch name>`
+
+## To create brach and switch
+`git branch -b <branch name>`
+
+## Delete only remote branch
+`git push origin :<branch name>`
+
+## Delete branch locally
+`git branch -d <branch name>`
+
+## Delete branch forcefully
+`git branch -D <branch name>`
+
+## To watch remote log
+`git remote show origin`
+
+## Delete all remote branch refrences
+`git remote prune origin`
+
+## List all the tag
+`git tag`
+
+## Go to tag
+`git checkout <tagname>`
+
+## Add a tag
+`git tag -a v1.0.0 -m "<commit message>"`
+
+## Push all tags
+`git push --tags`
+
+## List of all remote branches
+`git branch -r`
+
+## Watch all remote branches
+`git remote show <remote name>`
+
+## Delete all deleted remote branch refrences
+`git remote prune` 
+
+## Push branch into Heroko which is not master
+`git push <Heroko branch name> <branch name>:master`
