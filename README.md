@@ -1,3 +1,7 @@
+### Initialize git repository
+
+`git init`
+
 ### Add a file
 
 `git add <filename>`
