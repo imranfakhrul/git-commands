@@ -2,6 +2,12 @@
 
 `git init`
 
+### Add files/folder into `.gitignore`
+
+- Create a `.gitignore` file
+- Add file name or folder name into there
+- ![image](/assets/gitignore.png)
+
 ### Add a file
 
 `git add <filename>`
