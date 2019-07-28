@@ -138,15 +138,23 @@ OR
 
 ## Set configuration for local branch
 
-`git config user.name <username>`
-`git config user.email <email>`
+- Username
+
+  `git config user.name <username>`
+
+- Email
+
+  `git config user.email <email>`
 
 ## Set username password for local/paticular branch
 
-`git config credential.helper store`
-`git pull`
+- Run this command
 
-<!-- #### then provide the username and password for once, it won't ask you for password anymore -->
+  `git config credential.helper store`
+
+- Then pull the repository
+
+  `git pull`
 
 ## To untrack a single file that has already been added/initialized to repository
 
@@ -155,3 +163,21 @@ OR
 ## To untrack every file that is now in `.gitignore`
 
 `git rm -r --cached .`
+
+## Rename a local and remote git repository
+
+- Checkout to old repository
+
+  `git checkout <old name>`
+
+- Rename the repository
+
+  `git branch -m <new name>`
+
+- Delete origin repository
+
+  `git push origin --delete <old name>`
+
+- Push repository with new name
+
+  `git push origin -u <new name>`
