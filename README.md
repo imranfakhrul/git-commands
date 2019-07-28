@@ -6,7 +6,10 @@
 
 - Create a `.gitignore` file
 - Add file name or folder name into there
-- ![image](/assets/gitignore.png)
+
+  Example:
+
+  ![image](/assets/gitignore.png)
 
 ### Add a file
 
@@ -165,6 +168,10 @@ OR
 - Then pull the repository
 
   `git pull`
+
+## Remove cached password
+
+`git config --global --unset credential.helper`
 
 ### To untrack a single file that has already been added/initialized to repository
 
