@@ -41,6 +41,9 @@
 OR
 `git add .`
 
+## Add only part of a file
+`git add --patch <filename>`
+
 ### Get back from staged area
 
 `git rm --cached <filename>`
