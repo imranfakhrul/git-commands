@@ -201,3 +201,12 @@ OR
 - Push repository with new name
 
   `git push origin -u <new name>`
+
+- List the changed files before staging
+  `git diff --name-only`
+
+- List the changed files in staging
+  `git diff --name-only --cached`
+
+- List the changed files of current commit
+  `git diff --name-only HEAD^ HEAD`
