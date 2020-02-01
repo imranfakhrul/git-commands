@@ -1,212 +1,216 @@
-### Initialize git repository
+- **Initialize git repository**
 
-`git init`
+  `git init`
 
-### Add files/folder into `.gitignore`
+- **Add files/folder into `.gitignore`**
 
-- Create a `.gitignore` file
-- Add file name or folder name into there
+  - Create a `.gitignore` file
+  - Add file name or folder name into there
 
-  Example:
+    Example:
 
-  ![image](/assets/gitignore.png)
+    ![image](/assets/gitignore.png)
 
-### Add a file
+- **Add a file**
 
-`git add <filename>`
+  `git add <filename>`
 
-### Add some files by name
+- **Add some files by name**
 
-`git add <list of file>`
+  `git add <list of file>`
 
-### Add all .txt files (same extension files)
+- **Add all .txt files (same extension files)**
 
-`git add *.txt`
+  `git add *.txt`
 
-### Add all .txt files in docs directory
+- **Add all .txt files in docs directory**
 
-`git add docs/*.txt`
+  `git add docs/*.txt`
 
-### Add all files in docs directory
+- **Add all files in docs directory**
 
-`git add docs/`
+  `git add docs/`
 
-### Add all .txt files in the whole project
+- **Add all .txt files in the whole project**
 
-`git add "*.txt"`
+  `git add "*.txt"`
 
-### Add all files
+- **Add all files**
 
-`git add --all`
-OR
-`git add .`
+  `git add --all`
 
-## Add only part of a file
-`git add --patch <filename>`
+  OR
 
-### Get back from staged area
+  `git add .`
 
-`git rm --cached <filename>`
-OR
-`git reset HEAD <filename>`
+- **Add only part of a file**
+- `git add --patch <filename>`
 
-### Diffrence between last commit and present version(Before stage)/Unstage diffrences
+- **Get back from staged area**
 
-`git diff`
+  `git rm --cached <filename>`
 
-### Diffrence between staged version and last commmit
+  OR
 
-`git diff --staged`
+  `git reset HEAD <filename>`
 
-### commit changes
+- **Diffrence between last commit and present version(Before stage)/Unstage diffrences**
 
-`git commit`
-`git commit -m "<your message>"`
+  `git diff`
 
-### to add and commit in one command
+- **Diffrence between staged version and last commmit**
 
-`git commit -a -m "<your message>"`
+  `git diff --staged`
 
-### Amend last commmit and override commit message
+- **commit changes**
 
-`git add --all`
-`git commit --amend -m "<your message>"`
+  `git commit`
+  `git commit -m "<your message>"`
 
-### Move to the stage area from last commit
+- **to add and commit in one command**
 
-`git reset --soft HEAD^`
+  `git commit -a -m "<your message>"`
 
-### totally delete the last commit
+- **Amend last commmit and override commit message**
 
-`git reset --hard HEAD^`
+  `git add --all`
+  `git commit --amend -m "<your message>"`
 
-### Totally delete the last two commit
+- **Move to the stage area from last commit**
 
-`git reset --hard HEAD^^`
+  `git reset --soft HEAD^`
 
-### To watch all remote branches
+- **totally delete the last commit**
 
-`git branch -r`
+  `git reset --hard HEAD^`
 
-### To switch into branches
+- **Totally delete the last two commit**
 
-`git checkout <branch name>`
+  `git reset --hard HEAD^^`
 
-### To create branch
+- **To watch all remote branches**
 
-`git branch <branch name>`
+  `git branch -r`
 
-### To create brach and switch
+- **To switch into branches**
 
-`git branch -b <branch name>`
+  `git checkout <branch name>`
 
-### Delete only remote branch
+- **To create branch**
 
-`git push origin :<branch name>`
+  `git branch <branch name>`
 
-### Delete branch locally
+- **To create brach and switch**
 
-`git branch -d <branch name>`
+  `git branch -b <branch name>`
 
-### Delete branch forcefully
+- **Delete only remote branch**
 
-`git branch -D <branch name>`
+  `git push origin :<branch name>`
 
-### To watch remote log
+- **Delete branch locally**
 
-`git remote show origin`
+  `git branch -d <branch name>`
 
-### Delete all remote branch refrences
+- **Delete branch forcefully**
 
-`git remote prune origin`
+  `git branch -D <branch name>`
 
-### List all the tag
+- **To watch remote log**
 
-`git tag`
+  `git remote show origin`
 
-### Go to tag
+- **Delete all remote branch refrences**
 
-`git checkout <tagname>`
+  `git remote prune origin`
 
-### Add a tag
+- **List all the tag**
 
-`git tag -a v1.0.0 -m "<commit message>"`
+  `git tag`
 
-### Push all tags
+- **Go to tag**
 
-`git push --tags`
+  `git checkout <tagname>`
 
-### List of all remote branches
+- **Add a tag**
 
-`git branch -r`
+  `git tag -a v1.0.0 -m "<commit message>"`
 
-### Watch all remote branches
+- **Push all tags**
 
-`git remote show <remote name>`
+  `git push --tags`
 
-### Delete all deleted remote branch refrences
+- **List of all remote branches**
 
-`git remote prune`
+  `git branch -r`
 
-### Push branch into Heroko which is not master
+- **Watch all remote branches**
 
-`git push <Heroko branch name> <branch name>:master`
+  `git remote show <remote name>`
 
-### Set configuration for local branch
+- **Delete all deleted remote branch refrences**
 
-- Username
+  `git remote prune`
 
-  `git config user.name <username>`
+- **Push branch into Heroko which is not master**
 
-- Email
+  `git push <Heroko branch name> <branch name>:master`
 
-  `git config user.email <email>`
+- **Set configuration for local branch**
 
-### Set username password for local/paticular branch
+  - Username
 
-- Run this command
+    `git config user.name <username>`
 
-  `git config credential.helper store`
+  - Email
 
-- Then pull the repository
+    `git config user.email <email>`
 
-  `git pull`
+- **Set username password for local/paticular branch**
 
-## Remove cached password
+  - Run this command
 
-`git config --global --unset credential.helper`
+    `git config credential.helper store`
 
-### To untrack a single file that has already been added/initialized to repository
+  - Then pull the repository
 
-`git rm --cached <filename>`
+    `git pull`
 
-### To untrack every file that is now in `.gitignore`
+- **Remove cached password**
 
-`git rm -r --cached .`
+  `git config --global --unset credential.helper`
 
-### Rename a local and remote git repository
+- **To untrack a single file that has already been added/initialized to repository**
 
-- Checkout to old repository
+  `git rm --cached <filename>`
 
-  `git checkout <old name>`
+- **To untrack every file that is now in `.gitignore`**
 
-- Rename the repository
+  `git rm -r --cached .`
 
-  `git branch -m <new name>`
+- **Rename a local and remote git repository**
 
-- Delete origin repository
+  - Checkout to old repository
 
-  `git push origin --delete <old name>`
+    `git checkout <old name>`
 
-- Push repository with new name
+  - Rename the repository
 
-  `git push origin -u <new name>`
+    `git branch -m <new name>`
 
-- List the changed files before staging
-  `git diff --name-only`
+  - Delete origin repository
 
-- List the changed files in staging
-  `git diff --name-only --cached`
+    `git push origin --delete <old name>`
 
-- List the changed files of current commit
-  `git diff --name-only HEAD^ HEAD`
+  - Push repository with new name
+
+    `git push origin -u <new name>`
+
+  - List the changed files before staging
+    `git diff --name-only`
+
+  - List the changed files in staging
+    `git diff --name-only --cached`
+
+  - List the changed files of current commit
+    `git diff --name-only HEAD^ HEAD`
