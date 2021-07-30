@@ -244,3 +244,13 @@ Daily used git commands archive (**PRs welcome**)
     `git branch | egrep -v "master|develop" | xargs git branch -D`
 
       *here `-v` means "invert the match"*
+
+## For Mac users only
+
+- **Delete all `.DS_Store` files from `git` `—cached`**
+
+  `find . -name '.DS_Store' -type f | xargs git rm -r --cached`
+    
+    *You can use similar command for other file names*
+
+    *You can use regex in the search string parameter*
