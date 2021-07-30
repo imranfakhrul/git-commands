@@ -219,6 +219,9 @@ Daily used git commands archive (**PRs welcome**)
   - List the changed files of current commit
     `git diff --name-only HEAD^ HEAD`
 
+## For Mac users only
+
+
 - **Delete all `.DS_Store` files from `git` `—cached`**
 
   `find . -name '.DS_Store' -type f | xargs git rm -r --cached`
