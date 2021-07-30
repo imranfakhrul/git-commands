@@ -218,3 +218,11 @@ Daily used git commands archive (**PRs welcome**)
 
   - List the changed files of current commit
     `git diff --name-only HEAD^ HEAD`
+
+- **Delete all `.DS_Store` files from `git` `—cached`**
+
+  `find . -name '.DS_Store' -type f | xargs git rm -r --cached`
+    
+    *You can use similar command for other file names*
+
+    *You can use regex in the search string parameter*
