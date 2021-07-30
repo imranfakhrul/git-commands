@@ -218,3 +218,25 @@ Daily used git commands archive (**PRs welcome**)
 
   - List the changed files of current commit
     `git diff --name-only HEAD^ HEAD`
+
+- **Batch search and delete local branches when there are too many**
+
+  - Delete all branches matching keyword, e.g: dev<some-suffix> or <some-prefix>dev
+
+    - Delete all branches suffixing `dev`
+      
+      `git branch --list "*dev" | xargs git branch -D`
+
+    - Delete all branches prefixing `dev`
+      
+      `git branch --list "dev*" | xargs git branch -D`
+
+    - Delete all brancches prefixing `dev` and ends only with a number (e.g: task number)
+      
+      `git branch --list "dev*[0-9]" | xargs git branch -D`
+
+  - Delete all *except* given branches, e.g: except develop and master branchs
+
+    `git branch | egrep -v "master|develop" | xargs git branch -D`
+
+      *here `-v` means "invert the match"*
