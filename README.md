@@ -221,6 +221,10 @@ Daily used git commands archive (**PRs welcome**)
 
 - **Batch search and delete local branches when there are too many**
 
+  > **NOTE:** Beaware of `grep`, `egrep`, `xargs` in **Windows**
+  >> You can check out below link if you are facing any issue with these commands
+  >>> [git grep and xargs in Windows Batch file?](https://stackoverflow.com/questions/38672888/git-grep-and-xargs-in-windows-batch-file)
+
   - Delete all branches matching keyword, e.g: dev<some-suffix> or <some-prefix>dev
 
     - Delete all branches suffixing `dev`
