@@ -222,35 +222,61 @@ Daily used git commands archive (**PRs welcome**)
 - **Batch search and delete local branches when there are too many**
 
   > **NOTE:** Beaware of `grep`, `egrep`, `xargs` in **Windows**
-  >> You can check out below link if you are facing any issue with these commands
-  >>> [git grep and xargs in Windows Batch file?](https://stackoverflow.com/questions/38672888/git-grep-and-xargs-in-windows-batch-file)
+  >
+  > > You can check out below link if you are facing any issue with these commands
+  > >
+  > > > [git grep and xargs in Windows Batch file?](https://stackoverflow.com/questions/38672888/git-grep-and-xargs-in-windows-batch-file)
 
   - Delete all branches matching keyword, e.g: dev<some-suffix> or <some-prefix>dev
 
     - Delete all branches suffixing `dev`
-      
+
       `git branch --list "*dev" | xargs git branch -D`
 
     - Delete all branches prefixing `dev`
-      
+
       `git branch --list "dev*" | xargs git branch -D`
 
     - Delete all brancches prefixing `dev` and ends only with a number (e.g: task number)
-      
+
       `git branch --list "dev*[0-9]" | xargs git branch -D`
 
-  - Delete all *except* given branches, e.g: except develop and master branchs
+  - Delete all _except_ given branches, e.g: except develop and master branchs
 
     `git branch | egrep -v "master|develop" | xargs git branch -D`
 
-      *here `-v` means "invert the match"*
+    _here `-v` means "invert the match"_
 
 ## For Mac users only
+
+- **Often for Mac users, using bash terminal, you do not find git autocomplete in bash**
+
+  > **STEP 1:** From [git-completion](https://github.com/git/git/tree/master/contrib/completion)
+  >
+  > > Get git-completion script
+  >
+  > > `curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash`
+
+  > **STEP 2:** Update .bash_profile
+  >
+  > > Add the following code to your .bash_profile (~/.bash_profile).
+
+  ```
+  if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+  fi
+  ```
+
+  > **STEP 3:** Apply the changes
+  >
+  > > `source ~/.bash_profile`
+
+  Now you should be able to use git autocomplete in your bash terminal.
 
 - **Delete all `.DS_Store` files from `git` `—cached`**
 
   `find . -name '.DS_Store' -type f | xargs git rm -r --cached`
-    
-    *You can use similar command for other file names*
 
-    *You can use regex in the search string parameter*
+  _You can use similar command for other file names_
+
+  _You can use regex in the search string parameter_
