@@ -222,35 +222,52 @@ Daily used git commands archive (**PRs welcome**)
 - **Batch search and delete local branches when there are too many**
 
   > **NOTE:** Beaware of `grep`, `egrep`, `xargs` in **Windows**
-  >> You can check out below link if you are facing any issue with these commands
-  >>> [git grep and xargs in Windows Batch file?](https://stackoverflow.com/questions/38672888/git-grep-and-xargs-in-windows-batch-file)
+  >
+  > > You can check out below link if you are facing any issue with these commands
+  > >
+  > > > [git grep and xargs in Windows Batch file?](https://stackoverflow.com/questions/38672888/git-grep-and-xargs-in-windows-batch-file)
 
   - Delete all branches matching keyword, e.g: dev<some-suffix> or <some-prefix>dev
 
     - Delete all branches suffixing `dev`
-      
+
       `git branch --list "*dev" | xargs git branch -D`
 
     - Delete all branches prefixing `dev`
-      
+
       `git branch --list "dev*" | xargs git branch -D`
 
     - Delete all brancches prefixing `dev` and ends only with a number (e.g: task number)
-      
+
       `git branch --list "dev*[0-9]" | xargs git branch -D`
 
-  - Delete all *except* given branches, e.g: except develop and master branchs
+  - Delete all _except_ given branches, e.g: except develop and master branchs
 
     `git branch | egrep -v "master|develop" | xargs git branch -D`
 
-      *here `-v` means "invert the match"*
+    _here `-v` means "invert the match"_
 
 ## For Mac users only
 
 - **Delete all `.DS_Store` files from `git` `—cached`**
 
   `find . -name '.DS_Store' -type f | xargs git rm -r --cached`
-    
-    *You can use similar command for other file names*
 
-    *You can use regex in the search string parameter*
+  _You can use similar command for other file names_
+
+  _You can use regex in the search string parameter_
+
+## Useful repos and reads about Git
+
+- Git in GitHub
+
+  - [Git](https://github.com/git)
+
+- Useful repos
+
+  - [git-flow-completion](https://github.com/bobthecow/git-flow-completion)
+  - [git-flow](https://github.com/nvie/gitflow)
+
+- Useful reads
+
+  - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
