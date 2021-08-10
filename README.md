@@ -86,7 +86,7 @@ Daily used git commands archive (**PRs welcome**)
 
 - **Pick file from another branch to targeted branch**
 
-`git checkout <branch_name> <file_name>`
+  `git checkout <branch_name> <file_name>`
 
 - **Move to the stage area from last commit**
 
