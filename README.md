@@ -178,7 +178,7 @@ Daily used git commands archive (**PRs welcome**)
 
     `git config user.email <email>`
 
-- **Set username password for local/paticular branch**
+- **Set username password for local/particular branch**
 
   - Run this command
 
@@ -245,7 +245,7 @@ Daily used git commands archive (**PRs welcome**)
 
       `git branch --list "dev*" | xargs git branch -D`
 
-    - Delete all brancches prefixing `dev` and ends only with a number (e.g: task number)
+    - Delete all branches prefixing `dev` and ends only with a number (e.g: task number)
 
       `git branch --list "dev*[0-9]" | xargs git branch -D`
 
