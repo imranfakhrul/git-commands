@@ -58,27 +58,35 @@ Daily used git commands archive (**PRs welcome**)
 
   `git reset HEAD <filename>`
 
-- **Diffrence between last commit and present version(Before stage)/Unstage diffrences**
+- **Difference between last commit and present version(Before stage)/Unstage differences**
 
   `git diff`
 
-- **Diffrence between staged version and last commmit**
+- **Difference between staged version and last commit**
 
   `git diff --staged`
 
-- **commit changes**
+- **Commit changes**
 
   `git commit`
   `git commit -m "<your message>"`
 
-- **to add and commit in one command**
+- **To add and commit in one command**
 
   `git commit -a -m "<your message>"`
 
-- **Amend last commmit and override commit message**
+- **Amend last commit and override commit message**
 
   `git add --all`
   `git commit --amend -m "<your message>"`
+
+- **Pick specific commit from same or another branch to targeted branch**
+
+  `git cherry-pick <commit_id>`
+
+- **Pick file from another branch to targeted branch**
+
+  `git checkout <branch_name> <file_name>`
 
 - **Move to the stage area from last commit**
 
@@ -124,7 +132,7 @@ Daily used git commands archive (**PRs welcome**)
 
   `git remote show origin`
 
-- **Delete all remote branch refrences**
+- **Delete all remote branch references**
 
   `git remote prune origin`
 
@@ -152,7 +160,7 @@ Daily used git commands archive (**PRs welcome**)
 
   `git remote show <remote name>`
 
-- **Delete all deleted remote branch refrences**
+- **Delete all deleted remote branch references**
 
   `git remote prune`
 
@@ -170,7 +178,7 @@ Daily used git commands archive (**PRs welcome**)
 
     `git config user.email <email>`
 
-- **Set username password for local/paticular branch**
+- **Set username password for local/particular branch**
 
   - Run this command
 
@@ -237,7 +245,7 @@ Daily used git commands archive (**PRs welcome**)
 
       `git branch --list "dev*" | xargs git branch -D`
 
-    - Delete all brancches prefixing `dev` and ends only with a number (e.g: task number)
+    - Delete all branches prefixing `dev` and ends only with a number (e.g: task number)
 
       `git branch --list "dev*[0-9]" | xargs git branch -D`
 
